@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     var temp = 0.00
     var flag = 0
     var calFlag:Int = 0
+   
 
     @IBOutlet weak var textout: UITextField!
     
@@ -117,14 +118,14 @@ class ViewController: UIViewController {
     }
     
     @IBAction func buttone(_ sender: Any) {
-        textout.text = textout.text!+"2.71828"
+        textout.text = "2.71828"
     }
     @IBAction func button10(_ sender: Any) {
          textout.text = textout.text!+"."
     }
     
     @IBAction func button314(_ sender: Any) {
-        textout.text = textout.text!+"3.1415926535"
+        textout.text = "3.1415926535"
     }
     
     @IBAction func buttonsquare(_ sender: Any) {
@@ -150,6 +151,13 @@ class ViewController: UIViewController {
         temp = -1*temp;
         textout.text = "\(temp)"
     }
+    
+    @IBAction func buttoncountback(_ sender: Any) {
+        temp = Double(textout.text!)!
+        temp = 1/temp;
+        textout.text = "\(temp)"
+    }
+    
     
     @IBAction func buttonAdd(_ sender: Any) {
         if(flag==1){
