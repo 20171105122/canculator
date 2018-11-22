@@ -158,11 +158,50 @@ class ViewController: UIViewController {
         textout.text = "\(temp)"
     }
     
+    @IBAction func buttonfactorial(_ sender: Any) {
+        temp = Double(textout.text!)!
+        var a = 0
+        var b = 1
+        var c = 0.00
+        var i = 1
+        a = Int(temp)
+        c = temp - Double(a)
+        if c != 0.00{
+            textout.text = "error"
+        }
+        else{
+        while i <= a{
+            b = b * i
+            i = i + 1
+         }
+        textout.text = "\(b)"
+        }
+    }
+    
+    @IBAction func buttonsin(_ sender: Any) {
+        temp = Double(textout.text!)!
+        var r:Double = 0.00
+        r = sin(temp/180*3.14159265358979323846)
+        textout.text = "\(r)"
+    }
+    
+    @IBAction func buttoncos(_ sender: Any) {
+        temp = Double(textout.text!)!
+        var p:Double = 0.00
+        p = cos(temp/180*3.14159265358979323846)
+        textout.text = "\(p)"
+    }
+    
+    @IBAction func buttontan(_ sender: Any) {
+        temp = Double(textout.text!)!
+        var q:Double = 0.00
+        q = tan(temp/180*3.14159265358979323846)
+        textout.text = "\(q)"
+    }
     
     @IBAction func buttonAdd(_ sender: Any) {
         if(flag==1){
             textout.text = "\(temp+Double(textout.text!)!)"
-            
         }
         temp = Double(textout.text!)!
         calFlag = 2
@@ -172,7 +211,6 @@ class ViewController: UIViewController {
     @IBAction func buttonReduce(_ sender: Any) {
         if(flag==2){
             textout.text = "\(temp-Double(textout.text!)!)"
-            
         }
         temp = Double(textout.text!)!
         calFlag = 2
@@ -182,7 +220,6 @@ class ViewController: UIViewController {
     @IBAction func buttonMulti(_ sender: Any) {
         if(flag==3){
             textout.text = "\(temp*Double(textout.text!)!)"
-            
         }
         temp = Double(textout.text!)!
         calFlag = 2
@@ -192,7 +229,6 @@ class ViewController: UIViewController {
     @IBAction func buttonDivision(_ sender: Any) {
         if(flag==4){
             textout.text = "\(temp/Double(textout.text!)!)"
-            
         }
         temp = Double(textout.text!)!
         calFlag = 2
@@ -202,22 +238,18 @@ class ViewController: UIViewController {
     @IBAction func buttonCanculator(_ sender: Any) {
         if(flag==1){
             textout.text = "\(temp + Double(textout.text!)!)"
-            
         }
         
         if(flag==2){
             textout.text = "\(temp - Double(textout.text!)!)"
-            
         }
         
         if(flag==3){
             textout.text = "\(temp * Double(textout.text!)!)"
-            
         }
         
         if(flag==4){
             textout.text = "\(temp / Double(textout.text!)!)"
-            
         }
     }
     
